@@ -34,11 +34,11 @@ print(list(set_e))   # [3, 4, 5, 6, 7]
 print(tuple(set_e))  # (3, 4, 5, 6, 7)
 
 
-# Converting from dictionary
-dict_d = {1: "dinesh", 2: "Deepak", 3: "Raju"}
+# Converting from dictio
+dict_d = {1: "Yuva", 2: "Teja", 3: "Jagati"}
 print(list(dict_d))  # [1, 2, 3]
 
 
-# Dictionary conversion (UPDATED → name: 'yuvateja')
+# Dictionary conversion ('yuvateja')
 d = [('name', 'yuvateja'), ('batch', '22'), ('subject', 'python')]
 print(dict(d))  # {'name': 'yuvateja', 'batch': '22', 'subject': 'python'}
