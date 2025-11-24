@@ -50,7 +50,7 @@ print(f"total price:{sum(prices)}")
 credentials = ("admin", "python123")
 username = input()
 password = input()
-if username == credentials[0] and password == credentials[1]:
+if (username,password) == credentials:
     print("Login Succesful")
 else:
     print("Access Denied")
