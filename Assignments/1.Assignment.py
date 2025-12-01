@@ -2,12 +2,6 @@
 # User Name: Yuva
 # User Phone: 9876543210
 
-# Taking user name using input()
-user_name = input("Enter Your Name: ")
-
-# Taking user phone as input (int)
-user_phone = int(input("Enter Your Phone Number: "))
-
 # Product Details
 product_id = int(input("Enter Product ID: "))
 product_name = input("Enter Product Name: ")
@@ -35,8 +29,9 @@ supplier_details = {
 
 print("\n=========== ZEPTO PRODUCT DETAILS ===========\n")
 
-print("User Name:", user_name)
-print("User Phone Number:", user_phone)
+# Using the static details from comments
+print("User Name: Yuva")
+print("User Phone Number: 9876543210")
 print()
 
 # ----- Output -----
@@ -59,8 +54,6 @@ print("Supplier Details: Name - {}, Contact - {}, Location - {}"
 
 
 # ------------------------- SAMPLE OUTPUT -------------------------
-# Enter Your Name: Yuva
-# Enter Your Phone Number: 9876543210
 # Enter Product ID: 101
 # Enter Product Name: Amul Milk
 # Enter Price: 28
