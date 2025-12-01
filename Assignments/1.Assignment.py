@@ -1,80 +1,79 @@
-# ---------------- Zepto Product Information System ----------------
-# User Name: Yuva
-# User Phone: 9876543210
+# ---------------- Ganna Music App Information System ----------------
 
-# Product Details
-product_id = int(input("Enter Product ID: "))
-product_name = input("Enter Product Name: ")
-price = float(input("Enter Price: "))
+# Song Details
+song_id = int(input("Enter Song ID: "))                  # int
+song_name = input("Enter Song Name: ")                   # str
+artist_name = input("Enter Artist Name: ")              # str
+album_name = input("Enter Album Name: ")                # str
+duration_min = float(input("Enter Duration (in minutes): "))  # float
 
-categories = input("Enter Categories (comma-separated): ").split(",")
+genres = input("Enter Genres (comma-separated): ").split(",")  # list
 
-available_stock = int(input("Enter Available Stock: "))
-sold_stock = int(input("Enter Sold Stock: "))
-stock_details = (available_stock, sold_stock)
+plays_count = int(input("Enter Number of Plays: "))    # int
+likes_count = int(input("Enter Number of Likes: "))    # int
+stats = (plays_count, likes_count)                     # tuple
 
-discount_percentage = float(input("Enter Discount Percentage: "))
+popularity_percentage = float(input("Enter Popularity Percentage: "))  # float
 
-product_features = set(input("Enter Product Features (comma-separated): ").split(","))
+tags = set(input("Enter Song Tags (comma-separated): ").split(","))    # set
 
-supplier_name = input("Enter Supplier Name: ")
-supplier_contact = input("Enter Supplier Contact Number: ")
-supplier_location = input("Enter Supplier Location: ")
+publisher_name = input("Enter Publisher Name: ")       # str
+publisher_contact = input("Enter Publisher Contact Number: ")  # str
+publisher_location = input("Enter Publisher Location: ")  # str
 
-supplier_details = {
-    "name": supplier_name,
-    "contact": supplier_contact,
-    "location": supplier_location
+publisher_details = {  # dict
+    "name": publisher_name,
+    "contact": publisher_contact,
+    "location": publisher_location
 }
 
-print("\n=========== ZEPTO PRODUCT DETAILS ===========\n")
+print("\n=========== GANNA MUSIC APP DETAILS ===========\n")
 
-# Using the static details from comments
-print("User Name: Yuva")
-print("User Phone Number: 9876543210")
-print()
-
-# ----- Output -----
-
-# 1. Using Comma Separation
-print("Product ID, Name, Price:", product_id, product_name, price, sep=", ")
+# 1. Using Comma Separation (sep=',')
+print("Song ID, Name, Artist:", song_id, song_name, artist_name, sep=", ")
 
 # 2. Using Percentage Formatting (% operator)
-print("Product Discount: %.2f%%" % discount_percentage)
+print("Popularity: %.2f%%" % popularity_percentage)
 
 # 3. Using f-strings
-print(f"Product Name: {product_name}")
-print(f"Price: ₹{price}")
-print(f"Discount: {discount_percentage}%")
-print(f"Stock Available: {stock_details[0]} units")
+print(f"Song Name: {song_name}")
+print(f"Artist: {artist_name}")
+print(f"Album: {album_name}")
+print(f"Duration: {duration_min} minutes")
+print(f"Plays: {stats[0]}")
+print(f"Likes: {stats[1]}")
+print(f"Genres: {genres}")
+print(f"Tags: {tags}")
 
 # 4. Using .format() method
-print("Supplier Details: Name - {}, Contact - {}, Location - {}"
-      .format(supplier_details['name'], supplier_details['contact'], supplier_details['location']))
-
+print("Publisher Details: Name - {}, Contact - {}, Location - {}"
+      .format(publisher_details['name'], publisher_details['contact'], publisher_details['location']))
 
 # ------------------------- SAMPLE OUTPUT -------------------------
-# Enter Product ID: 101
-# Enter Product Name: Amul Milk
-# Enter Price: 28
-# Enter Categories (comma-separated): Dairy,Daily
-# Enter Available Stock: 120
-# Enter Sold Stock: 80
-# Enter Discount Percentage: 5
-# Enter Product Features (comma-separated): Fresh,High Quality,Low Fat
-# Enter Supplier Name: Amul Pvt Ltd
-# Enter Supplier Contact Number: 9988776655
-# Enter Supplier Location: Gujarat
+# Enter Song ID: 101
+# Enter Song Name: Shape of You
+# Enter Artist Name: Ed Sheeran
+# Enter Album Name: Divide
+# Enter Duration (in minutes): 4.5
+# Enter Genres (comma-separated): Pop,Dance
+# Enter Number of Plays: 100000
+# Enter Number of Likes: 80000
+# Enter Popularity Percentage: 95
+# Enter Song Tags (comma-separated): Top Hit,Trending
+# Enter Publisher Name: Sony Music
+# Enter Publisher Contact Number: 1234567890
+# Enter Publisher Location: USA
 #
-# =========== ZEPTO PRODUCT DETAILS ===========
+# =========== GANNA MUSIC APP DETAILS ===========
 #
-# User Name: Yuva
-# User Phone Number: 9876543210
-#
-# Product ID, Name, Price: 101, Amul Milk, 28.0
-# Product Discount: 5.00%
-# Product Name: Amul Milk
-# Price: ₹28.0
-# Discount: 5.0%
-# Stock Available: 120 units
-# Supplier Details: Name - Amul Pvt Ltd, Contact - 9988776655, Location - Gujarat
+# Song ID, Name, Artist: 101, Shape of You, Ed Sheeran
+# Popularity: 95.00%
+# Song Name: Shape of You
+# Artist: Ed Sheeran
+# Album: Divide
+# Duration: 4.5 minutes
+# Plays: 100000
+# Likes: 80000
+# Genres: ['Pop', 'Dance']
+# Tags: {'Trending', 'Top Hit'}
+# Publisher Details: Name - Sony Music, Contact - 1234567890, Location - USA
